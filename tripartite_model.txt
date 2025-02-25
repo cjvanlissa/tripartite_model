@@ -1,0 +1,22 @@
+dag {
+A
+CC
+EC
+ER
+O
+PC
+PP
+EC -> A
+EC -> ER
+EC -> O
+ER -> A
+O -> ER
+PC -> CC
+PC -> EC
+PC -> O
+PC -> PP
+PP -> EC
+PP -> ER
+PP -> O
+}
+
