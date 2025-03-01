@@ -1,22 +1,26 @@
 dag {
-A
-CC
-EC
-ER
 O
-PC
 PP
-EC -> A
-EC -> ER
-EC -> O
-ER -> A
-O -> ER
+EC
+PC
+CC
+ER
+A
+
 PC -> CC
 PC -> EC
-PC -> O
 PC -> PP
-PP -> EC
-PP -> ER
-PP -> O
-}
+PC -> O
 
+O -> ER [form="CC:O"];
+PP -> ER [form="CC:PP"];
+EC -> ER [form="CC:EC"];
+
+ER -> A
+
+CC -> ER [form="CC:O+CC:PP+CC:EC"];
+
+PP -> O
+EC -> O
+PP -> EC
+}
